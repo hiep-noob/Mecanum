@@ -1,2 +1,52 @@
 # Mecanum
 Project Giữa kỳ_Vũ Văn Hiệp
+# Mecanum Arm Robot — ROS2 Humble Simulation
+
+## Yêu cầu hệ thống
+- Ubuntu 22.04
+- ROS2 Humble
+- Gazebo Classic (11)
+
+## 1. Cài đặt dependencies
+
+```bash
+# Gazebo + ROS2 control
+sudo apt install -y \
+  ros-humble-gazebo-ros \
+  ros-humble-gazebo-ros2-control \
+  ros-humble-ros2-control \
+  ros-humble-ros2-controllers \
+  ros-humble-robot-state-publisher \
+  ros-humble-joint-state-publisher
+
+# TurtleBot3 world (môi trường mô phỏng)
+sudo apt install -y ros-humble-turtlebot3-gazebo
+
+# Python GUI
+sudo apt install -y python3-tk
+```
+
+## 2. Clone và build
+
+```bash
+mkdir -p ~/mecanum_ws/src
+cd ~/mecanum_ws/src
+git clone https://github.com/hiep-noob/V-V-n-Hi-p.git mecanum
+
+cd ~/mecanum_ws
+colcon build --packages-select mecanum --symlink-install
+source install/setup.bash
+```
+
+## 3. Khởi chạy mô phỏng
+
+```bash
+source install/setup.bash
+ros2 launch mecanum sim.launch.py
+```
+## 4. Công cụ bổ sung
+
+```bash
+# Đồ thị encoder 4 bánh
+ros2 run rqt_plot rqt_plot
+```
