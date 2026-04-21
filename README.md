@@ -31,7 +31,7 @@ sudo apt install -y python3-tk
 ```bash
 mkdir -p ~/mecanum_ws/src
 cd ~/mecanum_ws/src
-git clone https://github.com/hiep-noob/Mecanum.git
+git clone https://github.com/hiep-noob/Mecanum.git mecanum
 cd ~/mecanum_ws
 colcon build --packages-select mecanum --symlink-install
 source install/setup.bash
