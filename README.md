@@ -37,7 +37,15 @@ colcon build --packages-select mecanum --symlink-install
 source install/setup.bash
 ```
 
-## 3. Khởi chạy mô phỏng
+3. Cấp quyền thực thi cho các script
+```
+chmod +x ~/mecanum_ws/src/mecanum/mecanum_dashboard.py
+chmod +x ~/mecanum_ws/src/mecanum/scripts/teleop_node.py
+chmod +x ~/mecanum_ws/src/mecanum/src/arm_teleop.py
+chmod +x ~/mecanum_ws/src/mecanum/src/mecanum_control.py
+chmod +x ~/mecanum_ws/src/mecanum/src/mecanum_drive_controller.py
+```
+## 4. Khởi chạy mô phỏng
 
 ```bash
 source install/setup.bash
