@@ -48,7 +48,10 @@ chmod +x ~/mecanum_ws/src/mecanum/src/mecanum_drive_controller.py
 ## 4. Khởi chạy mô phỏng
 
 ```bash
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/mecanum_ws/src
+cd ~/mecanum_ws
 source install/setup.bash
+export LIBGL_ALWAYS_SOFTWARE=1
 ros2 launch mecanum sim.launch.py
 ```
 ## 4. Công cụ bổ sung
